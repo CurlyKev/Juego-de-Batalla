@@ -16,7 +16,8 @@ public class Main {
 
         List<Enemigo> enemigos = new ArrayList<>();
         enemigos.add(new EnemigoNormal("Goblin"));
-        enemigos.add(new Jefe("Dragón"));
+        enemigos.add(new EnemigoNormal("Orco"));
+        enemigos.add(new Jefe("Malenia"));
 
         Batalla batalla = new Batalla(jugador, enemigos);
         batalla.iniciar();

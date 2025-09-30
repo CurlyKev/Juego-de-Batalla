@@ -25,6 +25,10 @@ public class Vista {
                 objetivo.recibirDanio(jugador.ataque);
             }
             case 2 -> {
+                if (items.isEmpty()) {
+                    mostrar("No tienes ítems disponibles.");
+                    return;
+                }
                 mostrar("Elige ítem:");
                 for (int i = 0; i < items.size(); i++) {
                     mostrar((i + 1) + ". " + items.get(i).getNombre());
@@ -38,8 +42,15 @@ public class Vista {
     }
 
     public static void mostrarRegistro(Queue<String> registro) {
-        mostrar("Últimas acciones:");
+        mostrar("Últimas acciones generales:");
         for (String r : registro) mostrar("- " + r);
+    }
+
+    public static void mostrarAccionesJugador(List<String> acciones) {
+        mostrar("Últimas acciones del jugador:");
+        for (String a : acciones) {
+            mostrar("- " + a);
+        }
     }
 
     public static void mostrarResultado(Jugador jugador, List<Enemigo> enemigos) {
@@ -47,4 +58,3 @@ public class Vista {
         else mostrar("Derrota...");
     }
 }
-
