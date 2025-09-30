@@ -11,7 +11,7 @@ public class Main {
         int opcion = sc.nextInt();
         Rol rol = (opcion == 1) ? Rol.GUERRERO : Rol.EXPLORADOR;
 
-        Jugador jugador = new Jugador("Kevin", rol, items);
+        Jugador jugador = new Jugador("Jugador 1", rol, items);
 
         List<Enemigo> enemigos = new ArrayList<>();
         enemigos.add(new EnemigoNormal("Goblin"));
