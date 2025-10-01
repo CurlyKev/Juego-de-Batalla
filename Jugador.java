@@ -25,7 +25,7 @@ public class Jugador extends Combatiente {
         Vista.mostrarTurnoJugador(this, items, objetivo);
     }
 
-    public List<Item> getItems() { return items; }
+public List<Item> getInventario() { return items; }
 }
 
 
